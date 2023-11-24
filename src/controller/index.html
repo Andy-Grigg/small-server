@@ -20,14 +20,14 @@
 
     <p>Click the buttons below to start or stop the server</p>
     <div class="row">
-        <div class="col-2" hx-get="/api/server/start" hx-trigger="click" hx-target="server-status" hx-params="none">
+        <div class="col-2" hx-get="/api/server/start" hx-trigger="click" hx-target="#server-status" hx-params="none">
             <a class="btn btn-lg btn-success" href="#" role="button">Start Server</a>
         </div>
         <div class="col-2">
             <label class="form-label" for="time-to-shutdown">Time to shutdown</label>
             <input type="number" id="time-to-shutdown" class="form-control" value="60" />
         </div>
-        <div class="col-2" hx-get="/api/server/stop" hx-trigger="click" hx-target="server-status">
+        <div class="col-2" hx-get="/api/server/stop" hx-trigger="click" hx-target="#server-status">
             <a class="btn btn-lg btn-danger" href="#" role="button">Stop Server</a>
         </div>
     </div> <!-- /row -->
