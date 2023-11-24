@@ -20,7 +20,7 @@
 
     <p>Click the buttons below to start or stop the server</p>
     <div class="row">
-        <div class="col-2" hx-get="/api/server/start" hx-trigger="click" hx-target="#server-status" hx-params="none">
+        <div class="col-2" hx-get="/api/server/start" hx-trigger="click" hx-target="#server-status" hx-vals='js:{"time_to_shutdown": document.getElementById("time-to-shutdown").value}'>
             <a class="btn btn-lg btn-success" href="#" role="button">Start Server</a>
         </div>
         <div class="col-2">
@@ -32,7 +32,7 @@
         </div>
     </div> <!-- /row -->
     <div>
-        <span>Server status:</span> <span id="server-status"> </span>
+        <span>Server status:</span> <span id="server-status" hx-get="/api/server" hx-trigger="every 1s"> </span>
     </div>
 </div> <!-- /container -->
 </body>
